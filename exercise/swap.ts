@@ -1,10 +1,10 @@
-const word: string = "The QuiCk BrOwN Fox";
+const word: string = "The QuiCk cheEtaH";
 let res: string ="";
 
 for (let i = 0; i < word.length; i++) {
-    const char = word.charAt(i);
+    let char = word[i];
     
-    if( char === word.toUpperCase()) {
+    if( char === word[i].toUpperCase()) {
         res += char.toLowerCase()
     } else {
         res += char.toUpperCase()
