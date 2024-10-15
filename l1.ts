@@ -11,11 +11,20 @@ function subsets(nums: number[]): number[][] {
 
 console.log("1" + 2);
 
-const arr: any = ["a","b",[1,2],"c"]
-arr[2][1] = 3
+function climbStairs(n: number): number {
+    if (n === 1) {
+        return 1;
+    }
 
-console.log(arr[1],[2][0])
+    let dp: number[] = new Array(n + 1);
+    dp[1] = 1;
+    dp[2] = 2;
 
-const x = "purwadhika jakarta"
+    for (let i = 3; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
 
-console.log(x.substring(8, 10));
+    return dp[n];
+}
+
+console.log(climbStairs(4));
